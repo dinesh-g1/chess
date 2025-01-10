@@ -9,13 +9,11 @@ import java.util.Arrays;
 
 public class ChessGame extends BoardGame {
     private final ChessPlayer player1, player2;
-    private final ChessBoard board;
 
     public ChessGame(ChessBoard board, ChessPlayer player1, ChessPlayer player2) {
         super(board, new ArrayDeque<>(Arrays.asList(player1, player2)));
         this.player1 = player1;
         this.player2 = player2;
-        this.board = board;
     }
 
     @Override

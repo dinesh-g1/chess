@@ -8,6 +8,7 @@ import boardgamemodels.Player;
 
 import java.util.Map;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 public abstract class ChessPlayer extends Player {
     private final Map<PieceName, Piece> pieces;
@@ -35,5 +36,9 @@ public abstract class ChessPlayer extends Player {
 
     public ChessBoard getBoard() {
         return board;
+    }
+
+    public void putPiece(int row, int col, Piece piece) {
+        board.getCell(row, col).setPiece(Optional.of(piece));
     }
 }

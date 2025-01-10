@@ -16,6 +16,7 @@ public class HumanPlayer extends ChessPlayer{
 
     @Override
     public Move makeMove() {
+        getBoard().display();
         Scanner input = new Scanner(System.in);
         int sx = input.nextInt(), sy = input.nextInt();
         Cell source = getBoard().getCell(sx, sy);
